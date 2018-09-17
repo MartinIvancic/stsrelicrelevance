@@ -1,0 +1,120 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>relicrelevance</groupId>
+	<artifactId>relicrelevance</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+
+	<name>RelicRelevance</name>
+	<description>Orders relics from most relevant (countdown relics) to irrelevant (all charges used)</description>
+
+	<dependencies>
+		<dependency>
+			<groupId>com.megacrit.cardcrawl</groupId>
+			<artifactId>slaythespire</artifactId>
+			<version>${stSVersion}</version>
+			<scope>system</scope>
+			<systemPath>${basedir}/../lib/desktop-1.0.jar</systemPath>
+		</dependency>
+		<dependency>
+			<groupId>basemod</groupId>
+			<artifactId>basemod</artifactId>
+			<version>${baseModVersion}</version>
+			<scope>system</scope>
+			<systemPath>${basedir}/../lib/BaseMod.jar</systemPath>
+		</dependency>
+		<dependency>
+			<groupId>com.evacipated.cardcrawl</groupId>
+			<artifactId>ModTheSpire</artifactId>
+			<version>${modThespireversion}</version>
+			<scope>system</scope>
+			<systemPath>${basedir}/../lib/ModTheSpire.jar</systemPath>
+		</dependency>
+
+		<dependency>
+			<groupId>org.reflections</groupId>
+			<artifactId>reflections</artifactId>
+			<version>0.9.11</version>
+		</dependency>
+	</dependencies>
+
+	<profiles>
+		<profile>
+			<id>Release</id>
+			<activation>
+				<activeByDefault>true</activeByDefault>
+			</activation>
+			<properties>
+				<baseModVersion>3.2.2</baseModVersion>
+				<modThespireversion>3.1.0</modThespireversion>
+				<stSVersion>09-06-2018</stSVersion>
+			</properties>
+		</profile>
+	</profiles>
+
+	<build>
+		<finalName>RelicRelevance</finalName>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.7.0</version>
+				<configuration>
+					<source>1.8</source>
+					<target>1.8</target>
+				</configuration>
+			</plugin>
+
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-dependency-plugin</artifactId>
+				<executions>
+					<execution>
+						<id>unpack-dependencies</id>
+						<phase>prepare-package</phase>
+						<goals>
+							<goal>unpack-dependencies</goal>
+						</goals>
+						<configuration>
+							<includeArtifactIds>reflections,guava</includeArtifactIds>
+
+							<outputDirectory>${project.build.directory}/classes</outputDirectory>
+							<overWriteReleases>false</overWriteReleases>
+							<overWriteSnapshots>false</overWriteSnapshots>
+							<overWriteIfNewer>true</overWriteIfNewer>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-antrun-plugin</artifactId>
+				<version>1.8</version>
+				<executions>
+					<execution>
+						<phase>package</phase>
+						<configuration>
+							<target>
+								<copy file="target/RelicRelevance.jar"
+									tofile="../lib/RelicRelevance.jar" />
+							</target>
+						</configuration>
+						<goals>
+							<goal>run</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+
+		<resources>
+			<resource>
+				<directory>src/main/resources</directory>
+				<filtering>true</filtering>
+			</resource>
+		</resources>
+	</build>
+</project>
