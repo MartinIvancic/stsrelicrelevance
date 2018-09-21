@@ -31,11 +31,12 @@ public class RelicType {
 	private static final String[] ON_ATTACK_MONSTER_RELICS = {"SneckoSkull", "HandDrill", "ChemicalX", "ChampionsBelt", "BlueCandle"};	
 	private static final String[] ON_EXHAUST_RELICS = {"StrangeSpoon", "CharonsAshes", "DeadBranch"};	
 	private static final String[] AT_TURN_START_RELICS = { "BustedCrown", "IceCream", "PaperFrog", "PaperCrane", "OddMushroom", "WristBlade", 
-			"Turnip", "MedicalKit", "Calipers", "Sozu", "RunicDome", "CoffeeDripper", "Ectoplasm", "FusionHammer", "Ginger", "HoveringKite", "MagicFlower"};
+			"Turnip", "MedicalKit", "Calipers", "Sozu", "RunicDome", "CoffeeDripper", "Ectoplasm", "FusionHammer", "Ginger", "HoveringKite", "MagicFlower",
+			"WarpedTongs"};
 	private static final String[] ON_LOSE_HP_RELICS = {"CentennialPuzzle", "RunicCube", "GoldPlatedCables"};
 	private static final String[] ON_PLAYER_END_TURN_RELICS = {"RunicPyramid"};
 	private static final String[] BATTLE_START_PRE_DRAW_RELICS = {"BagOfPreparation"};
-	private static final String[] ON_VICTORY_RELICS = {"WhiteBeast", "SingingBowl", "QuestionCard", "PrayerWheel", "NlothsGift", "BloodyIdol"};
+	private static final String[] ON_VICTORY_RELICS = {"WhiteBeast", "SingingBowl", "QuestionCard", "PrayerWheel", "NlothsGift", "BloodyIdol", "PrismaticShard"};
 	private static final String[] ON_ENTER_REST_ROOM_RELICS = {"RegalPillow", "AncientTeaSet", "Shovel", "RegalPillow", "PeacePipe", "DreamCatcher"};
 	private static final String[] SET_COUNTER_RELICS = {"NlothsMask", "Omamori"};
 	private static final String[] ON_ENTER_ROOM_RELICS = {"JuzuBracelet", "TinyChest"};

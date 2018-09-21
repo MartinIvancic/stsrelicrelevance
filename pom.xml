@@ -47,9 +47,9 @@
 				<activeByDefault>true</activeByDefault>
 			</activation>
 			<properties>
-				<baseModVersion>3.2.2</baseModVersion>
-				<modThespireversion>3.1.0</modThespireversion>
-				<stSVersion>09-06-2018</stSVersion>
+				<baseModVersion>3.3.0</baseModVersion>
+				<modThespireversion>3.2.0</modThespireversion>
+				<stSVersion>09-20-2018</stSVersion>
 			</properties>
 		</profile>
 	</profiles>
