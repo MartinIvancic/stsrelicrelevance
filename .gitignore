@@ -3,6 +3,7 @@
 *.jar
 *.war
 *.ear
+target/**
 
 # Eclipse
 .project
@@ -35,3 +36,6 @@ bin
 *.log
 *.swp
 *.bak
+
+# SlayTheSpire
+sendToDevs/**
