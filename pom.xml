@@ -5,7 +5,7 @@
 
 	<groupId>relicrelevance</groupId>
 	<artifactId>relicrelevance</artifactId>
-	<version>3.2.1.1</version>
+	<version>${modVersion}</version>
 
 	<name>RelicRelevance</name>
 	<description>Orders relics from most relevant (countdown relics) to irrelevant (all charges used)</description>
@@ -50,7 +50,7 @@
 				<baseModVersion>3.3.0</baseModVersion>
 				<modThespireversion>3.2.0</modThespireversion>
 				<stSVersion>09-27-2018</stSVersion>
-				<modVersion>3.2.1.1</modVersion>
+				<modVersion>3.2.1.2</modVersion>
 			</properties>
 		</profile>
 	</profiles>

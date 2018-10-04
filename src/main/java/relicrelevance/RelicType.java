@@ -44,6 +44,7 @@ public class RelicType {
 			"SpiritPoop", "PotionBelt", "Pear", "Orrery", "PandorasBox", "OldCoin", "DollysMirror", "EmptyCage", "FrozenEye", "GoldenIdol", "Mango", "MarkOfTheBloom", "MeatOnTheBone"};
 
 	enum Types {
+		STARTING(-200, "none", HERO_BASE_RELICS),
 		USE_CARD(-100, "onUseCard", null),
 		ON_ATTACK_MONSTER(-90, "onAttackedMonster", ON_ATTACK_MONSTER_RELICS), 
 		ON_MANUAL_DISCARD(-86, "onManualDiscard", null), 
@@ -68,7 +69,6 @@ public class RelicType {
 		SET_COUNTER(-20, "setCounter", SET_COUNTER_RELICS), 
 		ON_EQUIP(-5, "onEquip", ON_EQUIP_RELICS), 
 		DEFAULT(1, "none", null),
-		STARTING(10, "none", HERO_BASE_RELICS),
 		DEPLETED(100, "none", null);
 
 		private int ordering;
